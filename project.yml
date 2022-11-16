@@ -49,7 +49,7 @@ homepage:
 
 sidebar:
   entries:
-    - title: EMS Event Catalog
+    - title: ONTAP 9.12.1 EMS reference
       url: /index.html
     - title: accesscache events
       entries:
