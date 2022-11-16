@@ -1,0 +1,94 @@
+---
+sidebar: sidebar
+permalink: wafl-analytics-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: wafl.analytics events
+---
+
+= wafl.analytics events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== wafl.analytics.air.uh
+*Severity*::
+ALERT
+*Description*::
+This message occurs when the system detects an inconsistency in the file system analytics database. As a consequence, file system analytics has been disabled.
+*Corrective Action*::
+Turn file system analytics on again for the volume to initiate new consistent analytics.
+*Syslog Message*::
+The system detected an inconsistency in the file system analytics database associated with volume %s:%s.
+*Parameters*::
+*vserveruuid* (STRING): Universal Unique ID (UUID) of the volume's Vserver.
+*volname* (STRING): Volume name.
+
+== wafl.analytics.init.fail
+*Severity*::
+ALERT
+*Description*::
+This message occurs when a volume fails to have a file system analytics database initialized.
+*Corrective Action*::
+Disable then re-enable file system analytics for the volume. If problems persist or further assistance is needed, contact NetApp technical support.
+*Syslog Message*::
+Failed to initialize a file system analytics database for volume %s:%s, %s.
+*Parameters*::
+*vserveruuid* (STRING): Universal Unique ID (UUID) of the volume's Vserver.
+*volname* (STRING): Volume name.
+*error* (STRING): Error message.
+
+== wafl.analytics.recover
+*Severity*::
+ALERT
+*Description*::
+This message occurs when a volume fails to recover the File System Analytics state after failing to start the initialization scanner. As a consequence, File System Analytics information might be unavailable or might not accurately reflect the volume's content.
+*Corrective Action*::
+Use the "volume analytics off" command to disable File System Analytics on the volume, and then use the "volume analytics on" command to enable File System Analytics. If problems persist or further assistance is needed, contact NetApp technical support.
+*Syslog Message*::
+The File System Analytics state for volume DSID (%lu) was not recovered after the initialization scanner failed to start. Reason: %s.
+*Parameters*::
+*dsid* (LONGINT): Unique identifier (DSID) of the volume.
+*error* (STRING): Error message.
+
+== wafl.analytics.rescan
+*Severity*::
+ALERT
+*Description*::
+This message occurs when the system detects an inconsistency in the file system analytics database. As a consequence, file system analytics information might be unavailable or might not accurately reflect the volume's content.
+*Corrective Action*::
+Turn file system analytics off and then on again for the volume. If problems persist or further assistance is needed, contact NetApp technical support.
+*Syslog Message*::
+The system detected an inconsistency in the file system analytics database associated with volume %s:%s.
+*Parameters*::
+*vserveruuid* (STRING): Universal Unique ID (UUID) of the volume's Vserver.
+*volname* (STRING): Volume name.
+
+== wafl.analytics.scan.fail
+*Severity*::
+ALERT
+*Description*::
+This message occurs when the "volume analytics on" command fails due to an internal error.
+*Corrective Action*::
+Resolve the error if possible. Disable file system analytics using the "volume analytics off" command and then re-enable file system analytics using the "volume analytics on" command. If problems persist or further assistance is needed, contact NetApp technical support.
+*Syslog Message*::
+File system analytics scan failed for volume "%s:%s. Error: %s".
+*Parameters*::
+*vserveruuid* (STRING): Universal Unique ID (UUID) of the volume's Vserver.
+*volname* (STRING): Volume name.
+*error* (STRING): Error message.
+
+== wafl.analytics.tz.changed
+*Severity*::
+ERROR
+*Description*::
+This message occurs when the system timezone is changed while file system analytics is enabled on the node. As a consequence, file system analytics information might not accurately reflect the volume's content.
+*Corrective Action*::
+Use the "volume analytics show -state on" command to find the volumes with file system analytics enabled, then use the "volume analytics off" and "volume analytics on" commands for each volume where file system analytics is enabled.
+*Syslog Message*::
+The system timezone has been changed while file system analytics is enabled.
+*Parameters*::
+(None).

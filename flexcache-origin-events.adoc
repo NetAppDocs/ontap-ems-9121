@@ -1,0 +1,29 @@
+---
+sidebar: sidebar
+permalink: flexcache-origin-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: flexcache.origin events
+---
+
+= flexcache.origin events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== flexcache.origin.config.sync.failed
+*Severity*::
+ERROR
+*Description*::
+This message occurs when the origin of the FlexCache volume expand operation fails to synchronize the configuration information between the newly created constituent volume and the cache cluster.
+*Corrective Action*::
+Use the "volume flexcache config-refresh" command on the cache cluster to update the origin of the FlexCache configuration.
+*Syslog Message*::
+Volume expand failed to create the origin configuration for the origin of the FlexCache volume "%s" in Vserver "%s" on the FlexCache cluster. Error: %s.
+*Parameters*::
+*originVolName* (STRING): Name of the origin of the FlexCache volume.
+*cacheVserver* (STRING): Name of the Vserver hosting the origin of the FlexCache volume.
+*errorString* (STRING): Error string.

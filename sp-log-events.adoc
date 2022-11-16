@@ -1,0 +1,39 @@
+---
+sidebar: sidebar
+permalink: sp-log-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: sp.log events
+---
+
+= sp.log events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== sp.log.partition.full
+*Severity*::
+ERROR
+*Description*::
+This message occurs when the available memory of the log partition in the Service Processor (SP) or the Baseboard Management Controller (BMC) is low. If the log partition is full, it might lead to unexpected configuration issues.
+*Corrective Action*::
+1. Run the "system autosupport invoke -node <node-name> -type all" command from the ONTAP CLI to collect the SP or BMC logs before they can be cleared. Verify from the command output that the logs were transferred. 2. During the next maintenance cycle, execute the following commands from the SP or BMC CLI to clear the log partition: a. "priv set diag" b. "bmc wipeclean" for BMC or "sp wipeclean" for SP c. "bmc reboot" for BMC or "sp reboot" for SP The SP or BMC "wipeclean" command clears all the configuration and logs from the SP or BMC. After you reboot, wait for 10 minutes to allow ONTAP to resync the configuration before performing any action.
+*Syslog Message*::
+%s Log partition is almost full.
+*Parameters*::
+*sp_type* (STRING): Service processor type (SP or BMC)
+
+== sp.log.partition.readonly
+*Severity*::
+ERROR
+*Description*::
+This message occurs when the node's Service Processor (SP) or Baseboard Management Controller (BMC) log partition is mounted as read-only. This can occur because of file system errors. If the log partition is as mounted read-only, the BMC or SP will not be able to record logs, configuration updates from ONTAP will fail, and ONTAP might not display the current BMC or SP status.
+*Corrective Action*::
+1. Use the "system service-processor reboot-sp -node <node-name> -force true" command to reboot the SP or BMC. 2. After the SP or BMC reboot, this message should no longer occur. If the message occurs again, contact NetApp technical support.
+*Syslog Message*::
+%s log partition is mounted as read-only.
+*Parameters*::
+*sp_type* (STRING): Service processor type (SP or BMC)

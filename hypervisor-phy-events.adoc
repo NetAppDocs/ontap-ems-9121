@@ -1,0 +1,69 @@
+---
+sidebar: sidebar
+permalink: hypervisor-phy-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: hypervisor.phy events
+---
+
+= hypervisor.phy events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== hypervisor.phy.nic.count
+*Severity*::
+ALERT
+*Description*::
+This message occurs when the number of physical NICs on the hypervisor is not sufficient for ONTAP(R) Select support.
+*Corrective Action*::
+Add NICs to the hypervisor configuration to meet the requirements for ONTAP(R) Select.
+*Syslog Message*::
+Insufficient number of physical NICs on the hypervisor: %d. ONTAP(R) Select requires %d NICs.
+*Parameters*::
+*count* (INT): Count of physical NICs active on the hypervisor.
+*required* (INT): Required number of physical NICs for ONTAP(R) Select to run on the hypervisor.
+
+== hypervisor.phy.nic.mtu
+*Severity*::
+ALERT
+*Description*::
+This message occurs when the MTU of the physical network interface is not large enough for ONTAP(R) Select support.
+*Corrective Action*::
+The MTU for the network interface needs to be configured to the required size in the hypervisor configuration to meet the requirements for ONTAP(R) Select.
+*Syslog Message*::
+Physical interface %s on the hypervisor is configured with MTU: %d. ONTAP(R) Select requires an MTU of %d.
+*Parameters*::
+*name* (STRING): Physical network interface name.
+*mtu* (INT): MTU of the physical network interface.
+*required* (INT): Required MTU of the physical network interface.
+
+== hypervisor.phy.nic.speed
+*Severity*::
+ALERT
+*Description*::
+This message occurs when the speed of the physical network interface is not sufficient for ONTAP(R) Select support.
+*Corrective Action*::
+Check the cabling or negotiation for the port speed to meet the requirements for ONTAP(R) Select.
+*Syslog Message*::
+Insufficient speed of physical network interface %s on the hypervisor: %s. ONTAP(R) Select requires %s.
+*Parameters*::
+*name* (STRING): Physical network interface name.
+*speed* (STRING): Current speed of the physical network interface in bps.
+*required* (STRING): Required speed of the physical network interface in bps.
+
+== hypervisor.phy.nic.status
+*Severity*::
+ALERT
+*Description*::
+This message occurs when a physical network interface on the hypervisor is not operational.
+*Corrective Action*::
+The interface, port, or cabling needs to be investigated for faults. The interface must be up to meet the requirements for ONTAP(R) Select.
+*Syslog Message*::
+Physical network interface %s on the hypervisor is not operational. Current status: %s.
+*Parameters*::
+*name* (STRING): Physical network interface name.
+*status* (STRING): Opererational status of the physical network interface.

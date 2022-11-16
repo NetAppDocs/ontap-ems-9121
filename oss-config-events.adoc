@@ -1,0 +1,28 @@
+---
+sidebar: sidebar
+permalink: oss-config-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: oss.config events
+---
+
+= oss.config events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== oss.config.file.modified
+*Severity*::
+NOTICE
+*Description*::
+This message occurs when a configuration file for the the ONTAP(R) Status Service (OSS) server is modified from its original released version.
+*Corrective Action*::
+If the modification was intentional, you can ignore this message. If the modification was not intentional, confirm that write access controls to the node's root volume are configured correctly.
+*Syslog Message*::
+OSS has detected a modified configuration file. Process: %s, file: %s.
+*Parameters*::
+*process* (STRING): Name of the process that loaded the modified file.
+*filepath* (STRING): The full file path for the modified file.

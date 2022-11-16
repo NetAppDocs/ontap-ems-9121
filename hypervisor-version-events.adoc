@@ -1,0 +1,28 @@
+---
+sidebar: sidebar
+permalink: hypervisor-version-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: hypervisor.version events
+---
+
+= hypervisor.version events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== hypervisor.version
+*Severity*::
+ALERT
+*Description*::
+This message occurs when the version of the hypervisor is not supported by ONTAP(R) Select.
+*Corrective Action*::
+Move ONTAP(R) Select to a supported hypervisor version.
+*Syslog Message*::
+Unsupported hypervisor version: %s. Supported versions: %s
+*Parameters*::
+*version* (STRING): Current version of the hypervisor.
+*supported_versions* (STRING): Supported versions of the hypervisor.

@@ -1,0 +1,60 @@
+---
+sidebar: sidebar
+permalink: appdm-l2snap-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: appdm.l2snap events
+---
+
+= appdm.l2snap events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== appdm.l2snap.createfailed
+*Severity*::
+ERROR
+*Description*::
+This message occurs when the Snapshot(tm) copy create request between the storage system and the host experiences a failure.
+*Corrective Action*::
+Verify the network connection between the host and the storage system to determine whether network communication is working correctly. If the condition persists, contact NetApp technical support.
+*Syslog Message*::
+On Vserver %s, application %s, component %s, creating Snapshot copy %s failed: %s.
+*Parameters*::
+*vsUuid* (STRING): UUID of the Vserver for which to perform the Snapshot copy create operation.
+*appUuid* (STRING): UUID of the application.
+*appCompUuid* (STRING): UUID of the application component.
+*snapshotName* (STRING): Name of the Snapshot copy to be created.
+*errorString* (STRING): Description of the failure.
+
+== appdm.l2snap.deletefailed
+*Severity*::
+ERROR
+*Description*::
+This message occurs when the Snapshot(tm) copy delete request between the storage system and the host experiences a failure.
+*Corrective Action*::
+Verify the network connection between the host and the storage system to determine whether network communication is working correctly. If the condition persists, contact NetApp technical support.
+*Syslog Message*::
+On Vserver %s, application component %s, deleting Snapshot copy %s failed: %s.
+*Parameters*::
+*vsUuid* (STRING): UUID of the Vserver for which to perform the Snapshot copy delete operation.
+*appCompUuid* (STRING): UUID of the application component.
+*snapshotUuid* (STRING): UUID of the Snapshot copy to be deleted.
+*errorString* (STRING): Description of the failure.
+
+== appdm.l2snap.listfailed
+*Severity*::
+ERROR
+*Description*::
+This message occurs when the Snapshot(tm) copy list request between the storage system and the host experiences a failure.
+*Corrective Action*::
+Verify the network connection between the host and the storage system to determine whether network communication is working correctly. If the condition persists, contact NetApp technical support.
+*Syslog Message*::
+On Vserver %s, application component %s, listing Snapshot copy failed: %s.
+*Parameters*::
+*vsUuid* (STRING): UUID of the Vserver for which to perform the Snapshot copy list operation.
+*appCompUuid* (STRING): UUID of the application component.
+*errorString* (STRING): Description of the failure.

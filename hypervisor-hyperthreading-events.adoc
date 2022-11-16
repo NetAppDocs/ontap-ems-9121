@@ -1,0 +1,27 @@
+---
+sidebar: sidebar
+permalink: hypervisor-hyperthreading-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: hypervisor.hyperthreading events
+---
+
+= hypervisor.hyperthreading events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== hypervisor.hyperthreading
+*Severity*::
+ALERT
+*Description*::
+This message occurs when hyperthreading is enabled on the hypervisor. Hyperthreading must be disabled for ONTAP(R) Select support.
+*Corrective Action*::
+Disable hyperthreading in the hypervisor configuration.
+*Syslog Message*::
+Hyperthreading is enabled on the hypervisor, but it is not supported by ONTAP(R) Select.
+*Parameters*::
+(None).
