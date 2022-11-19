@@ -1,0 +1,76 @@
+---
+sidebar: sidebar
+permalink: oss-monitor-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: oss.monitor events
+---
+
+= oss.monitor events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== oss.monitor.noplugins.loaded
+*Severity*::
+ERROR
+*Description*::
+This message occurs when the ONTAP(R) Status Service (OSS) monitor can not load any configured plug-ins. Not having any loaded plug-ins means that OSS monitor is not functional and needs to be fixed.
+*Corrective Action*::
+Check the configuration under system status in diagnostic mode to make sure that the OSS monitor is configured correctly for the device being monitored. For example, to check that the hypervisor settings are correct for the monitoring of the SDOT hypervisor, show the configuration like this: set -privilege diagnostic; system status hypervisor show Adjust any settings, and then restart the monitor to see whether the plug-in load correctly: set -privilege diagnostic; system status restart -service mond For assistance contact NetApp technical support.
+*Syslog Message*::
+OSS Monitor has not loaded any plug-ins. Reason: %s.
+*Parameters*::
+*reason* (STRING): String containing additional information or reasons for the plug-in load failure.
+
+== oss.monitor.plugin.initFail
+*Severity*::
+ERROR
+*Description*::
+This message occurs when the initialization of an ONTAP(R) Status Service (OSS) plug-in fails. A failure can occur due to a misconfiguration within ONTAP, external infrastructure, or a remote device. If this event is encountered, it means that OSS might not successfully handle status events from this source.
+*Corrective Action*::
+Verify the configuration of the components that are involved in the failure. This might be an internal system, infrastructure, or external device, depending on the purpose of the plug-in. For assistance contact NetApp technical support.
+*Syslog Message*::
+OSS plug-in failure [%s]: %s
+*Parameters*::
+*name* (STRING): Name of the plug-in or instance that is experiencing failure.
+*reason* (STRING): Specific details regarding the failure event.
+
+== oss.monitor.snmp.cleared
+*Severity*::
+NOTICE
+*Description*::
+This message occurs when a previous ONTAP(R) Status Service (OSS) monitor had an SNMP error that is now cleared.
+*Corrective Action*::
+None.
+*Syslog Message*::
+OSS Monitor SNMP error has been cleared.
+*Parameters*::
+(None).
+
+== oss.monitor.snmp.error
+*Severity*::
+ERROR
+*Description*::
+This message occurs when the ONTAP(R) Status Service (OSS) monitor using SNMP has experienced an error or outage with the device being monitored.
+*Corrective Action*::
+Check to see that the device has the SNMP agent configured correctly to allow the OSS monitor to function. Consult the device vendor's documentation for setting up the SNMP configuration. For assistance contact NetApp technical support.
+*Syslog Message*::
+OSS Monitor has SNMP error. Reason: %s.
+*Parameters*::
+*reason* (STRING): String containing additional information or reasons for the SNMP outage.
+
+== oss.monitor.v2c.unsupported
+*Severity*::
+ERROR
+*Description*::
+This message occurs when the ONTAP(R) Status Service (OSS) monitor using SNMP has not been configured to use SNMP v3 and has defaulted to trying to use SNMP v2. This is insecure and not supported.
+*Corrective Action*::
+Configure SNMP v3 monitoring. Each device has a specific configuration needed for SNMP v3. For example, the monitoring of the SDOT hypervisor requires the following command to be completed for configuring SNMP v3: set -privilege diagnostic; system hypervisor snmpv3-config create|modify ... For assistance contact NetApp technical support.
+*Syslog Message*::
+OSS Monitor has SNMP v2 configured, which is not supported.
+*Parameters*::
+(None).

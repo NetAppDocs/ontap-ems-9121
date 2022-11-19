@@ -1,0 +1,27 @@
+---
+sidebar: sidebar
+permalink: sp-reboot-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: sp.reboot events
+---
+
+= sp.reboot events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== sp.reboot.sensor.unreadable
+*Severity*::
+NOTICE
+*Description*::
+This message occurs when one or more sensors are unreadable from Service Processor (SP) or Baseboard Management Controller (BMC).SP or BMC is rebooted in attempt to recover the sensor reading.
+*Corrective Action*::
+No user action is required.
+*Syslog Message*::
+Rebooting %s because one or more sensors are unreadable.
+*Parameters*::
+*sp_type* (STRING): Service processor type (SP or BMC).

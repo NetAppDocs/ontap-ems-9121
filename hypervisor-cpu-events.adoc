@@ -1,0 +1,40 @@
+---
+sidebar: sidebar
+permalink: hypervisor-cpu-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: hypervisor.cpu events
+---
+
+= hypervisor.cpu events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== hypervisor.cpu.count
+*Severity*::
+ALERT
+*Description*::
+This message occurs when the number of physical CPUs on the hypervisor are not sufficient for ONTAP(R) Select support.
+*Corrective Action*::
+Add more CPUs to the ONTAP(R) Select hypervisor configuration.
+*Syslog Message*::
+Insufficient number of CPUs on the hypervisor is: %d. ONTAP(R) Select requires: %d
+*Parameters*::
+*count* (INT): Number of CPUs on the hypervisor.
+*minimum* (INT): Minimum number of CPUs required on the hypervisor.
+
+== hypervisor.cpu.version
+*Severity*::
+ALERT
+*Description*::
+This message occurs when the hypervisor CPU type running ONTAP(R) Select is not supported. Supported types are the XEON E5 v3 or later.
+*Corrective Action*::
+Move ONTAP(R) Select to a hypervisor with a supported CPU.
+*Syslog Message*::
+Unsupported hypervisor CPU: %s
+*Parameters*::
+*version* (STRING): Current version of the CPU.

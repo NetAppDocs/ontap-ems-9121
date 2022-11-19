@@ -1,0 +1,40 @@
+---
+sidebar: sidebar
+permalink: oss-eventept-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: oss.eventept events
+---
+
+= oss.eventept events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== oss.eventept.conn.lost
+*Severity*::
+ERROR
+*Description*::
+This message occurs when the connection between the "event endpoint" and the ONTAP(R) Status Service (OSS) server is lost. OSS is responsible for collecting system status information, in the form of events, from various internal and external components of the node. Components report events by submitting them to an "event endpoint" which then relays the information to the central OSS server. When the connection between the endpoint and the server is broken, events submitted will be queued until the connection can be restored. If the link is not repaired in a timely manner, some events may be discarded.
+*Corrective Action*::
+A broken connection is usually a temporary condition. The link will automatically be repaired once inter-process communication is re-established. The service can be tested with the command 'system status show -name "System up time"'. If the up time increments with repeated calls, the connection has been restored. If the connection is not restored in ~10 minutes, contact NetApp technical support.
+*Syslog Message*::
+OSS Event Endpoint lost connection. Process: %s, Reason: %s.
+*Parameters*::
+*process* (STRING): Name of the process that owns the event endpoint
+*reason* (STRING): String containing additional information or reasons for the connection loss
+
+== oss.eventept.conn.restored
+*Severity*::
+NOTICE
+*Description*::
+This message occurs when the connection between the "event endpoint" and the ONTAP Status Service (OSS) server is restored. This notice will only occur when the same endpoint has previously experienced a loss or disconnect.
+*Corrective Action*::
+(None).
+*Syslog Message*::
+OSS Event Endpoint connection restored. Process: %s.
+*Parameters*::
+*process* (STRING): Name of the process that owns the event endpoint

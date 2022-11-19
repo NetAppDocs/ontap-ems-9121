@@ -1,0 +1,28 @@
+---
+sidebar: sidebar
+permalink: hypervisor-memory-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: hypervisor.memory events
+---
+
+= hypervisor.memory events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== hypervisor.memory.size
+*Severity*::
+ALERT
+*Description*::
+This message occurs when the amount of memory installed on the hypervisor is not sufficient for ONTAP(R) Select support.
+*Corrective Action*::
+Add more memory to the ONTAP(R) Select hypervisor configuration.
+*Syslog Message*::
+Insufficient amount of memory on the hypervisor: %s. ONTAP(R) Select requires: %s of memory.
+*Parameters*::
+*size* (STRING): Size of memory active on the hypervisor.
+*required* (STRING): Size of memory required on the hypervisor.

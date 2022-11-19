@@ -1,0 +1,28 @@
+---
+sidebar: sidebar
+permalink: crypto-okmrecovery-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: crypto.okmrecovery events
+---
+
+= crypto.okmrecovery events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== crypto.okmrecovery.failed
+*Severity*::
+ALERT
+*Description*::
+This message occurs when the boot menu OKM recovery command fails to recover the onboard key hierarchy.
+*Corrective Action*::
+This message is usually seen when an incorrect cluster passphrase was entered during a previous boot menu recovery command. To recover the key hierarchy, enter option 10 at the boot menu prompt. You will need to have the cluster passphrase and a copy of the output from the "security key-manager backup show" command. If the boot menu recovery process fails again, contact NetApp technical support.
+*Syslog Message*::
+ERROR: Import of the onboard key hierarchy failed: %s. Additional information: %s.
+*Parameters*::
+*failure_msg* (STRING): Message describing what operation failed.
+*additional_msg* (STRING): Additional information regarding the failure.
