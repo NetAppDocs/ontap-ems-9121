@@ -1,0 +1,32 @@
+---
+sidebar: sidebar
+permalink: tcp-conn-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: tcp.conn events
+---
+
+= tcp.conn events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== tcp.conn.inconsistent
+*Severity*::
+ERROR
+*Description*::
+This message occurs when TCP internal metadata for a given TCP connection is inconsistent and does not align with the socket send buffer data. This inconsistency might result in a controller disruption. Depending on how the inconsistency occurs, the TCP connection can be reset.
+*Corrective Action*::
+If the TCP SACK option is enabled, disable it and re-establish the specified TCP connection. Also, check for network congestion in the network attached to this controller and address any issues found.
+*Syslog Message*::
+Inconsistency between TCP metadata and the socket send buffer occurred for the connection with local address "%s:%d" and remote address "%s:%d". The inconsistency occurred while processing "%s". The connection is "%s".
+*Parameters*::
+*local_address* (STRING): Local IP address of the connection.
+*local_port* (INT): Local port of the connection.
+*peer_address* (STRING): Foreign IP address of the connection.
+*peer_port* (INT): Foreign port of the connection.
+*error_code_path* (STRING): Code path where the error occurred.
+*connection_reset* (STRING): Indication of whether the connection was reset or not.

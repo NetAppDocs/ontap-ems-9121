@@ -1,0 +1,30 @@
+---
+sidebar: sidebar
+permalink: appdm-l2-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: appdm.l2 events
+---
+
+= appdm.l2 events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== appdm.l2.notifyfailed
+*Severity*::
+ERROR
+*Description*::
+This message occurs when the system fails to notify the host of an event.
+*Corrective Action*::
+Verify the network connection between the host and the storage system to determine whether network communication is working correctly. If the condition persists, contact NetApp technical support.
+*Syslog Message*::
+On Vserver %s, application component %s, failed to notify the host of event: %s with error %s.
+*Parameters*::
+*vsUuid* (STRING): UUID of the Vserver that failed to notify the host.
+*appCompUuid* (STRING): UUID of the application component.
+*notificationMsg* (STRING): Description of the event.
+*errorString* (STRING): Description of the failure.

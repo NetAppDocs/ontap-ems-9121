@@ -1,0 +1,28 @@
+---
+sidebar: sidebar
+permalink: oss-trap-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: oss.trap events
+---
+
+= oss.trap events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== oss.trap
+*Severity*::
+NOTICE
+*Description*::
+This message occurs when the ONTAP(R) Status Service gets an SNMP trap from a monitored device.
+*Corrective Action*::
+(None).
+*Syslog Message*::
+Trap %s : %s
+*Parameters*::
+*trapname* (STRING): Trap SNMP OID or SNMP MIB symbolic name.
+*trapbody* (STRING): Trap body with SNMP OID bindings.

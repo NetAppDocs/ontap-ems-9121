@@ -1,0 +1,27 @@
+---
+sidebar: sidebar
+permalink: sp-network-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: sp.network events
+---
+
+= sp.network events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== sp.network.link.down
+*Severity*::
+ERROR
+*Description*::
+This message occurs when the Service Processor (SP) detects a link error on the SP network port. This can happen if a network cable is not plugged into the SP network port. It can also happen if the network that the SP is connected to cannot run at 10/100 Mbps.
+*Corrective Action*::
+1. Check whether the network cable is correctly plugged into the SP network port. 2. Check the link status LED on the SP. 3. Verify that the network that the SP is connected to supports autonegotiation to 10/100 Mbps or is running at one of those speeds; otherwise, SP network connectivity does not work.
+*Syslog Message*::
+Service Processor (SP) network port link down due to cable or network errors.
+*Parameters*::
+(None).

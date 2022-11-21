@@ -1,0 +1,63 @@
+---
+sidebar: sidebar
+permalink: monitor-fan-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: monitor.fan events
+---
+
+= monitor.fan events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== monitor.fan.critical
+*Severity*::
+EMERGENCY
+*Description*::
+This message occurs when one or more main unit fans have failed. The system cannot continue to operate.
+*Corrective Action*::
+Replace the failed fans.
+*Syslog Message*::
+%s
+*Parameters*::
+*report* (STRING): Report indicating the critical state.
+
+== monitor.fan.failed
+*Severity*::
+ALERT
+*Description*::
+This message occurs when one or more main unit fans have failed. The system remains operational. If the condition persists too long, an automatic shutdown for overtemperature might occur.
+*Corrective Action*::
+Reseat the failed fans. If the error persists, replace them.
+*Syslog Message*::
+%s
+*Parameters*::
+*report* (STRING): Report indicating the failed fans.
+
+== monitor.fan.ok
+*Severity*::
+NOTICE
+*Description*::
+This message occurs when a previously failed main unit fan has been restarted.
+*Corrective Action*::
+(None).
+*Syslog Message*::
+%s
+*Parameters*::
+*report* (STRING): Report indicating that the failed fans have restarted.
+
+== monitor.fan.warning
+*Severity*::
+NOTICE
+*Description*::
+This message occurs when one or more fans are in a warning state.
+*Corrective Action*::
+Replace the indicated fans to avoid overheating.
+*Syslog Message*::
+%s
+*Parameters*::
+*report* (STRING): Report indicating the warning level.

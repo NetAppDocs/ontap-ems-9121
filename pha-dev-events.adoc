@@ -1,0 +1,85 @@
+---
+sidebar: sidebar
+permalink: pha-dev-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: pha.dev events
+---
+
+= pha.dev events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== pha.dev.get.capacity.failed
+*Severity*::
+ERROR
+*Description*::
+This message occurs when ONTAP(R)software fails to get a drives's capacity after an extended wait. As a result, cannot add the drive.
+*Corrective Action*::
+Ensure that the hypervisor's device is still connected and accessible by ONTAP.
+*Syslog Message*::
+Failed to get drive capacity for device %s%d after %d seconds.
+*Parameters*::
+*devname* (STRING): Name of the device.
+*unit* (INT): Unit number of the device.
+*wait_time* (INT): Number of seconds waited for capacity information.
+
+== pha.dev.get.uuid.bioReadErr
+*Severity*::
+ERROR
+*Description*::
+This message occurs when block read operation for the passthrough host adapter (PHA) disk header returns an error. As a result, Data ONTAP(R) is unable to add or manage this device.
+*Corrective Action*::
+Ensure that the device is still connected to and accessible by Data ONTAP(R) and retry the operation.
+*Syslog Message*::
+Failed to get UUID for device %s%d. Reason: Block read operation returned an error: 0x%x.
+*Parameters*::
+*devname* (STRING): Name of the device.
+*unit* (INT): Unit number of the device.
+*bio_error* (INTHEX): Error code returned by block read operation.
+
+== pha.dev.get.uuid.devNotAdded
+*Severity*::
+ERROR
+*Description*::
+This message occurs when Data ONTAP(R) fails to get disk header after multiple retries and finally give up. As a result, Data ONTAP(R) is unable to add the disk.
+*Corrective Action*::
+Ensure that the device is still connected to and accessible by Data ONTAP(R) and retry the operation.
+*Syslog Message*::
+Failed to get disk header for device %s%d. Number of bioerr %d Retries %d.
+*Parameters*::
+*devname* (STRING): Name of the device.
+*unit* (INT): Unit number of the device.
+*bioerr_cnt* (INT): Number of BIO errors.
+*retry_cnt* (INT): Number of retries.
+
+== pha.dev.get.uuid.devNotExist
+*Severity*::
+ERROR
+*Description*::
+This message occurs when Data ONTAP(R) fails to retrieve the the descriptor for the passthrough host adapter (PHA) device. As a result, Data ONTAP(R) fails to read the header on this device and is unable to add or manage it.
+*Corrective Action*::
+Ensure that the device is still connected to and accessible by Data ONTAP(R) and retry the operation.
+*Syslog Message*::
+Failed to retrieve the descriptor for device %s%d. Reason: %s.
+*Parameters*::
+*devname* (STRING): Name of the device.
+*unit* (INT): Unit number of the device.
+*error* (STRING): Error message.
+
+== pha.dev.uuidWriteHeaderErr
+*Severity*::
+ERROR
+*Description*::
+This message occurs when Data ONTAP(R) fails to write the header to the passthrough host adapter (PHA) device. As a result, Data ONTAP(R) is unable to add or manage this device.
+*Corrective Action*::
+Ensure that the device is still connected to and accessible by Data ONTAP(R) and retry the operation.
+*Syslog Message*::
+Failed to write header to the device %s%d.
+*Parameters*::
+*devname* (STRING): Name of the device.
+*unit* (INT): Unit number of the device.

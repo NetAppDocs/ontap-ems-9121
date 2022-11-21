@@ -1,0 +1,94 @@
+---
+sidebar: sidebar
+permalink: hypervisor-guest-events.html
+keywords: ems, message, messages, event, events, group, catalog
+summary: hypervisor.guest events
+---
+
+= hypervisor.guest events
+:toc: macro
+:toclevels: 1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+== hypervisor.guest.cpu
+*Severity*::
+ALERT
+*Description*::
+This message occurs when the hypervisor does not have a sufficient number of CPUs configured to support an ONTAP(R) Select guest.
+*Corrective Action*::
+Configure the required number of CPUs in the hypervisor configuration to support an ONTAP(R) Select guest.
+*Syslog Message*::
+Insufficient CPUs configured for the ONTAP(R) Select guest on the hypervisor: %d. %d CPUs are required.
+*Parameters*::
+*count* (INT): Number of CPUs currently configured.
+*required* (INT): Required number of CPUs to be configured.
+
+== hypervisor.guest.guests
+*Severity*::
+ALERT
+*Description*::
+This message occurs when the number of ONTAP(R) Select guests exceeds the recommended limit.
+*Corrective Action*::
+Reduce the number of guests on the hypervisor to meet the requirements for ONTAP(R) Select.
+*Syslog Message*::
+Unsupported number of ONTAP(R) Select guests on the hypervisor: %d. Maximum supported number of guests: %d.
+*Parameters*::
+*count* (INT): Number of ONTAP(R) Select guests.
+*required* (INT): Maximum number of ONTAP(R) Select guests.
+
+== hypervisor.guest.if.count
+*Severity*::
+ALERT
+*Description*::
+This message occurs when the hypervisor does not have a sufficient number of virtual network interfaces configured for the guest for ONTAP(R) Select support.
+*Corrective Action*::
+Verify that enough virtual network interfaces are configured to meet the requirements for ONTAP(R) Select.
+*Syslog Message*::
+Insufficient number of virtual network interfaces configured for the ONTAP(R) Select guest on the hypervisor: %d. %d interfaces are required.
+*Parameters*::
+*count* (INT): Number of virtual network interfaces configured.
+*required* (INT): Required number of virtual network interfaces to be configured.
+
+== hypervisor.guest.if.speed
+*Severity*::
+ALERT
+*Description*::
+This message occurs when the speed of the virtual network interface configured for the guest is not sufficient for ONTAP(R) Select support.
+*Corrective Action*::
+Configured the speed of the virtual network interface to meet the required speed for ONTAP(R) Select support.
+*Syslog Message*::
+The speed of interface %s configured for the ONTAP(R) Select guest on the hypervisor is insufficient: %s. Required speed: %s.
+*Parameters*::
+*name* (STRING): Name of the virtual network interface.
+*speed* (STRING): Speed of the configured virtual network interface.
+*required* (STRING): Required speed of virtual network interface to be configured.
+
+== hypervisor.guest.if.status
+*Severity*::
+ALERT
+*Description*::
+This message occurs when a guest's virtual network interface is not operational.
+*Corrective Action*::
+The interface, port, or cabling needs to be investigated for faults. The interface must be "up" to meet the requirements for ONTAP(R) Select.
+*Syslog Message*::
+Virtual network interface %s assigned to the ONTAP(R) Select guest is not operational. Current status: %s.
+*Parameters*::
+*name* (STRING): Name of the virtual network interface.
+*status* (STRING): Operational status of the virtual network interface.
+
+== hypervisor.guest.memory
+*Severity*::
+ALERT
+*Description*::
+This message occurs when the hypervisor does not have a sufficient amount of memory configured for the guest for ONTAP(R) Select support.
+*Corrective Action*::
+Configure the required amount of memory in the hypervisor configuration to support an ONTAP(R) Select guest.
+*Syslog Message*::
+Insufficient amount of memory configured for the ONTAP(R) Select guest on the hypervisor: %s. Required memory: %s.
+*Parameters*::
+*amount* (STRING): Amount of memory configured.
+*required* (STRING): Required amount of memory to be as configured.
