@@ -21,6 +21,8 @@ homepage:
   tiles:
     - title: EMS references for other ONTAP releases
       links:
+          - title: ONTAP 9.13.1
+            url: https://docs.netapp.com/us-en/ontap-ems-9131/index.html        
           - title: ONTAP 9.11.1
             url: https://docs.netapp.com/us-en/ontap-ems-9111/index.html      
           - title: ONTAP 9.10.1
