@@ -15,12 +15,13 @@ settings:
 product-family: 
   name: ONTAP
   repo: ontap-family
-  sidebar_label: All ONTAP product documentation
   
 homepage:
   tiles:
     - title: EMS references for other ONTAP releases
       links:
+          - title: ONTAP 9.14.1
+            url: https://docs.netapp.com/us-en/ontap-ems-9141/index.html      
           - title: ONTAP 9.13.1
             url: https://docs.netapp.com/us-en/ontap-ems-9131/index.html        
           - title: ONTAP 9.11.1
