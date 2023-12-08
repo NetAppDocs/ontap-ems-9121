@@ -6,7 +6,6 @@ summary: oss.config events
 ---
 
 = oss.config events
-:toc: macro
 :toclevels: 1
 :hardbreaks:
 :nofooter:

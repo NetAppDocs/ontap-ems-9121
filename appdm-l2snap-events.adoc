@@ -6,7 +6,6 @@ summary: appdm.l2snap events
 ---
 
 = appdm.l2snap events
-:toc: macro
 :toclevels: 1
 :hardbreaks:
 :nofooter:

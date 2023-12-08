@@ -6,7 +6,6 @@ summary: hypervisor.phy events
 ---
 
 = hypervisor.phy events
-:toc: macro
 :toclevels: 1
 :hardbreaks:
 :nofooter:

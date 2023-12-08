@@ -6,7 +6,6 @@ summary: tcp.conn events
 ---
 
 = tcp.conn events
-:toc: macro
 :toclevels: 1
 :hardbreaks:
 :nofooter:

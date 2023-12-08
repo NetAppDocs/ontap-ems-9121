@@ -6,7 +6,6 @@ summary: oss.eventept events
 ---
 
 = oss.eventept events
-:toc: macro
 :toclevels: 1
 :hardbreaks:
 :nofooter:

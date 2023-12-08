@@ -6,7 +6,6 @@ summary: oss.trap events
 ---
 
 = oss.trap events
-:toc: macro
 :toclevels: 1
 :hardbreaks:
 :nofooter:
