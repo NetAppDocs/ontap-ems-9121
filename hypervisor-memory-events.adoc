@@ -6,7 +6,6 @@ summary: hypervisor.memory events
 ---
 
 = hypervisor.memory events
-:toc: macro
 :toclevels: 1
 :hardbreaks:
 :nofooter:

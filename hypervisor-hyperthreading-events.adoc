@@ -6,7 +6,6 @@ summary: hypervisor.hyperthreading events
 ---
 
 = hypervisor.hyperthreading events
-:toc: macro
 :toclevels: 1
 :hardbreaks:
 :nofooter:

@@ -6,7 +6,6 @@ summary: hypervisor.cpu events
 ---
 
 = hypervisor.cpu events
-:toc: macro
 :toclevels: 1
 :hardbreaks:
 :nofooter:

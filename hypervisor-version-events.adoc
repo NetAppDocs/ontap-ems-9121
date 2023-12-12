@@ -6,7 +6,6 @@ summary: hypervisor.version events
 ---
 
 = hypervisor.version events
-:toc: macro
 :toclevels: 1
 :hardbreaks:
 :nofooter:
