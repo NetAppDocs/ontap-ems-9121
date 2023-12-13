@@ -6,7 +6,6 @@ summary: appdm.l2 events
 ---
 
 = appdm.l2 events
-:toc: macro
 :toclevels: 1
 :hardbreaks:
 :nofooter:
