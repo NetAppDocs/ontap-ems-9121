@@ -13,6 +13,9 @@ summary: pcie.link events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+pcie.link EMS events occur when PCI Express link errors are detected.
+
 == pcie.link.errors
 *Severity*::
 NOTICE

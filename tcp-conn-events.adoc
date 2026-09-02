@@ -13,6 +13,9 @@ summary: tcp.conn events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+tcp.conn EMS events occur when TCP internal metadata for a connection is inconsistent with the socket send buffer data.
+
 == tcp.conn.inconsistent
 *Severity*::
 ERROR

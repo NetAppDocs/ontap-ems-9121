@@ -13,6 +13,9 @@ summary: dbs.slice events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+dbs.slice EMS events occur when ONTAP encounters issues associated with the Slice service in the distributed block store.
+
 == dbs.slice.operation
 *Severity*::
 NOTICE

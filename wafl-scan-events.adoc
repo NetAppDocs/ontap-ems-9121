@@ -13,6 +13,9 @@ summary: wafl.scan events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+wafl.scan EMS events occur when ONTAP encounters issues associated with WAFL scanner operations.
+
 == wafl.scan.autocommit.disable
 *Severity*::
 INFORMATIONAL

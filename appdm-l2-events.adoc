@@ -13,6 +13,9 @@ summary: appdm.l2 events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+appdm.l2 EMS events occur when the storage system fails to notify the host of an event.
+
 == appdm.l2.notifyfailed
 *Severity*::
 ERROR

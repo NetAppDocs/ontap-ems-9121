@@ -13,6 +13,9 @@ summary: vnm.dataip events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+vnm.dataip EMS events occur when ONTAP encounters issues associated with a data IP address being added to or removed from a node.
+
 == vnm.dataip.added
 *Severity*::
 NOTICE

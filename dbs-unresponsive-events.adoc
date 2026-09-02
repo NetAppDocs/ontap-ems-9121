@@ -13,6 +13,9 @@ summary: dbs.unresponsive events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+dbs.unresponsive EMS events occur when Distributed Block Store (DBS) detects an unresponsive service.
+
 == dbs.unresponsive.service.alrt
 *Severity*::
 ALERT

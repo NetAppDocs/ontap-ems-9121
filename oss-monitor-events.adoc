@@ -13,6 +13,9 @@ summary: oss.monitor events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+oss.monitor EMS events occur when ONTAP encounters issues associated with the ONTAP(R) Status Service (OSS) monitor and its SNMP-based device monitoring plug-ins.
+
 == oss.monitor.noplugins.loaded
 *Severity*::
 ERROR

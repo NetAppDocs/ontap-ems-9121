@@ -13,6 +13,9 @@ summary: dbs.prestartup events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+dbs.prestartup EMS events occur when a Distributed Block Store (DBS) prestartup event occurs during system startup.
+
 == dbs.prestartup
 *Severity*::
 NOTICE

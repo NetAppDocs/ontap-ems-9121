@@ -13,6 +13,9 @@ summary: hypervisor.memory events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+hypervisor.memory EMS events occur when the amount of memory installed on the hypervisor is not sufficient for ONTAP(R) Select support.
+
 == hypervisor.memory.size
 *Severity*::
 ALERT

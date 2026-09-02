@@ -13,6 +13,9 @@ summary: hypervisor.phy events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+hypervisor.phy EMS events occur when ONTAP encounters issues associated with the physical network interfaces on the hypervisor not meeting ONTAP(R) Select requirements.
+
 == hypervisor.phy.nic.count
 *Severity*::
 ALERT
