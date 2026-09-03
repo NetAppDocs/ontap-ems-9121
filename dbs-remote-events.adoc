@@ -13,6 +13,9 @@ summary: dbs.remote events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+dbs.remote EMS events occur when ONTAP encounters issues associated with remote cluster connectivity or paused remote replication in the distributed block store.
+
 == dbs.remote.cluster
 *Severity*::
 NOTICE

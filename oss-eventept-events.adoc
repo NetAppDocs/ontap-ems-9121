@@ -13,6 +13,9 @@ summary: oss.eventept events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+oss.eventept EMS events occur when ONTAP encounters issues associated with the connection between an event endpoint and the ONTAP(R) Status Service (OSS) server.
+
 == oss.eventept.conn.lost
 *Severity*::
 ERROR

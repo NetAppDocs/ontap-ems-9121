@@ -13,6 +13,9 @@ summary: hypervisor.cpu events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+hypervisor.cpu EMS events occur when ONTAP encounters issues associated with the CPU configuration of the hypervisor running ONTAP(R) Select.
+
 == hypervisor.cpu.count
 *Severity*::
 ALERT

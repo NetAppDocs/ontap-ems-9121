@@ -13,6 +13,9 @@ summary: nvdimm.nvemm events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+nvdimm.nvemm EMS events occur when ONTAP encounters issues associated with NVDIMM devices copying nonvolatile data to or from flash memory.
+
 == nvdimm.nvemm.destage.succeed
 *Severity*::
 NOTICE

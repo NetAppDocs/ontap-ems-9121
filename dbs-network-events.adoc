@@ -13,6 +13,9 @@ summary: dbs.network events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+dbs.network EMS events occur when ONTAP encounters issues associated with network configuration, connectivity, or MTU size in the distributed block store cluster.
+
 == dbs.network.error.fault
 *Severity*::
 ERROR

@@ -13,6 +13,9 @@ summary: oss.config events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+oss.config EMS events occur when a configuration file for the ONTAP(R) Status Service (OSS) server is modified from its original released version.
+
 == oss.config.file.modified
 *Severity*::
 NOTICE

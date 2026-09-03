@@ -13,6 +13,9 @@ summary: dbs.block events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+dbs.block EMS events occur when a Distributed Block Store (DBS) completes a block service repair operation involving block rewrites to replica BServices.
+
 == dbs.block.repair.success
 *Severity*::
 NOTICE

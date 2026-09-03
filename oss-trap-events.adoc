@@ -13,6 +13,9 @@ summary: oss.trap events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+oss.trap EMS events occur when the ONTAP(R) Status Service receives an SNMP trap from a monitored device.
+
 == oss.trap
 *Severity*::
 NOTICE

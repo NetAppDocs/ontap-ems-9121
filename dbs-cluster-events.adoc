@@ -13,6 +13,9 @@ summary: dbs.cluster events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+dbs.cluster EMS events occur when ONTAP encounters issues associated with Distributed Block Store (DBS) cluster operations, such as cluster master selection or IOPS overprovisioning.
+
 == dbs.cluster
 *Severity*::
 NOTICE

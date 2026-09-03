@@ -13,6 +13,9 @@ summary: hypervisor.hyperthreading events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+hypervisor.hyperthreading EMS events occur when hyperthreading is enabled on the hypervisor running ONTAP(R) Select.
+
 == hypervisor.hyperthreading
 *Severity*::
 ALERT

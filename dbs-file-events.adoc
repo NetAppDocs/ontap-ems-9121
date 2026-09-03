@@ -13,6 +13,9 @@ summary: dbs.file events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+dbs.file EMS events occur when ONTAP encounters issues associated with a mounted container file system on a node, such as low capacity or a read-only state.
+
 == dbs.file.system.capacity.low
 *Severity*::
 ERROR

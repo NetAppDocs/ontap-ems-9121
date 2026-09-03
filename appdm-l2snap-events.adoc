@@ -13,6 +13,9 @@ summary: appdm.l2snap events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+appdm.l2snap EMS events occur when ONTAP encounters issues associated with Snapshot copy create or delete requests between the storage system and the host.
+
 == appdm.l2snap.createfailed
 *Severity*::
 ERROR

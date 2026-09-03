@@ -13,6 +13,9 @@ summary: service.resp events
 :linkattrs:
 :imagesdir: ./media/
 
+[.lead]
+service.resp EMS events occur when a service is detected as responsive and this state is committed into the database.
+
 == service.resp.committed
 *Severity*::
 NOTICE
